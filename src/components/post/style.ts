@@ -1,15 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div<{size?: number}>`
+export const Container = styled.div`
     width: 100%;
     height: 100%;
     background: var(--blue);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     display: flex;
     flex-direction: column;
-    @media(min-width: 600px){
-        grid-column: span ${props => props.size || 1};
-    }
 `;
 export const Image = styled.img`
     height: 70%;

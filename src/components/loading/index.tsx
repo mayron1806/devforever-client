@@ -1,7 +1,7 @@
 "use client"
 import { useContext } from "react";
-import { ColorContext } from "../context/color";
-import * as C from "../components/loading/style";
+import { ColorContext } from "../../context/color";
+import * as C from "./style";
 
 function Loading() {
   const mainColor = useContext(ColorContext);

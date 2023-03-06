@@ -1,7 +1,8 @@
 import Layout from "@/components/layout";
 import { Post } from "@/types/post";
-import dynamic from "next/dynamic";
-import Loading from "./loading";
+import PostCardList from "@/components/post-card-list";
+import SearchBar from "@/components/search-bar";
+import styled from "styled-components";
 
 const posts: Post[] = [
   { id: "123", title: "Lorem ipsum dolor sit amet consectetur adipiscing "},
@@ -16,15 +17,20 @@ const posts: Post[] = [
   { id: "12314", title: "Lorem ipsum dolor sit adipiscing "},
   { id: "12d23", title: "Lorem ipsum dolor sit amet "}
 ]
-const Posts = dynamic(() => import("@/components/post-card-list"), {
-  loading: () => <Loading />
-})
 const Home = () => {
   return (
     <Layout>
-      <Posts posts={posts}/>
+      <Container>
+        <SearchBar />
+        <PostCardList posts={posts}/>  
+      </Container>
     </Layout>
   );
 }
- 
+const Container = styled.main`
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
 export default Home;

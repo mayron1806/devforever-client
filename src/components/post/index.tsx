@@ -3,12 +3,11 @@ import * as C from "./style";
 
 type props = {
   postData: PostType,
-  size?: number
 }
 
-function CardPost({ postData, size }: props) {
+function CardPost({ postData }: props) {
   return (
-    <C.Container size={size}>
+    <C.Container>
       <C.Image/>
       <C.Content>
         <C.IconContainer>

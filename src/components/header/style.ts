@@ -120,7 +120,7 @@ export const ItemMenu = styled(Link)<{route: string}>`
             width: 100%;
         }
     }
-    ${props => props.href.toString().includes(props.route) && activeItemMenu()}
+    ${props => props.href === props.route && activeItemMenu()}
     @media(max-width: 800px){
         color: var(--white);
         ::before{

@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 
 function Header() {
   const { pathname } = useRouter();
+  console.log(pathname);
   
   const [dark, setDark] = useState<boolean>(false);
 
@@ -43,7 +44,7 @@ function Header() {
           >Artigos</C.ItemMenu>
           
           <C.ItemMenu 
-            href={"/post/teste"} 
+            href={"/post"} 
             route={pathname}
           >Projetos</C.ItemMenu>
           
