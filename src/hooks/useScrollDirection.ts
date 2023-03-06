@@ -16,7 +16,7 @@ export const useScrollDirection = () => {
               window.removeEventListener("scroll", scrollEvent);
             }
         }
-    }, [lastScrollY]);
+    }, [lastScrollY, direction]);
     
     return { direction };
 }
