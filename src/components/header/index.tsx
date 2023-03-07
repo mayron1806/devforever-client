@@ -44,7 +44,7 @@ function Header() {
           >Artigos</C.ItemMenu>
           
           <C.ItemMenu 
-            href={"/post"} 
+            href={"/project"} 
             route={pathname}
           >Projetos</C.ItemMenu>
           
